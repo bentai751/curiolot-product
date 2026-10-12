@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="CURIOLOT 是培賢有限公司開發中的香港收藏品拍賣平台。查看產品方向及互動流程示範。">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#243af5">
+  <meta property="og:title" content="CURIOLOT｜收藏，值得被珍惜">
+  <meta property="og:description" content="香港收藏品拍賣平台，開發中。探索模型、潮玩與卡牌的產品流程示範。">
+  <title>CURIOLOT｜香港收藏品拍賣平台</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.mjs"></script>
+<link rel="canonical" href="https://about.curiolot.online/"></head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <header class="site-header wrap">
+    <a class="brand" href="index.html" aria-label="CURIOLOT 首頁">CURIOLOT<span>.</span></a>
+    <nav aria-label="主要導覽">
+      <a href="#demo">產品示範</a><a href="#about">關於我們</a><a href="product.html" lang="en">English</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="status"><span class="status-dot" aria-hidden="true"></span> 香港收藏品拍賣平台・開發中</p>
+        <h1 id="hero-title">讓每件收藏，<br>找到下一位<br>珍惜的人。</h1>
+        <p class="hero-description">從模型、潮玩到卡牌，CURIOLOT 正在建立一個讓收藏者探索拍品、參與競投及追蹤交易進度的平台。</p>
+        <p class="english-intro" lang="en">A collectible-auction platform being built for Hong Kong.</p>
+        <a class="button primary" href="#demo">體驗產品流程 <span aria-hidden="true">↗</span></a>
+        <p class="hero-note">產品尚未正式推出；下方示範無需登入或付款。</p>
+      </div>
+      <div class="hero-art">
+        <img src="assets/collection.svg" alt="原創收藏品插畫：藍色模型與幾何圖案收藏卡，全部為虛構示範物件" width="640" height="560">
+        <div class="art-caption"><span>每一件，都有故事。</span><span lang="en">Collect what you love.</span></div>
+      </div>
+    </section>
+    <div class="category-ribbon"><div class="wrap"><span>模型 <small lang="en">Models</small></span><span>潮玩 <small lang="en">Art toys</small></span><span>卡牌 <small lang="en">Cards</small></span><span>其他收藏 <small lang="en">More discoveries</small></span></div></div>
+    <section class="demo-section wrap" id="demo" aria-labelledby="demo-title">
+      <div class="section-heading"><div><h2 id="demo-title">先試一次競投。</h2><p>由探索拍品，到提交出價，看看產品流程如何運作。</p></div><span class="demo-label">互動產品示範</span></div>
+      <div class="demo-notice"><strong>這是流程示範。</strong> 拍品、價格及出價紀錄均為合成資料，沒有真實拍賣、付款或交付。此示範獨立於開發中的拍賣平台。</div>
+      <noscript><p class="demo-notice">互動示範需要啟用 JavaScript；你仍可閱讀下方產品及公司介紹。</p></noscript>
+      <div class="demo-toolbar">
+        <div class="filters" role="group" aria-label="示範拍品分類">
+          <button type="button" data-category="all" aria-pressed="true">全部收藏</button>
+          <button type="button" data-category="models" aria-pressed="false">模型</button>
+          <button type="button" data-category="toys" aria-pressed="false">潮玩</button>
+          <button type="button" data-category="cards" aria-pressed="false">卡牌</button>
+        </div>
+        <label class="search-label"><span class="sr-only">搜尋示範拍品</span><input id="search" type="search" placeholder="搜尋示範拍品" maxlength="100"></label>
+      </div>
+      <div class="demo-layout">
+        <div><p class="result-count" id="result-count" role="status"></p><div class="lot-list" id="lot-list" aria-label="示範拍品"></div></div>
+        <section class="bid-panel" aria-labelledby="selected-title">
+          <div class="detail-art" id="detail-art" aria-hidden="true"></div>
+          <div class="bid-content"><span class="lot-kind" id="selected-category"></span><h3 id="selected-title">選擇示範拍品</h3><p id="selected-description"></p>
+            <div class="price-row"><div><span class="price-label">示範目前價格</span><strong id="current-price"></strong></div><span id="bid-count"></span></div>
+            <form id="bid-form" novalidate>
+              <label for="bid-amount">你的示範出價（HK$）</label>
+              <div class="bid-input-row"><input id="bid-amount" name="amount" type="number" inputmode="numeric" step="1" required aria-describedby="bid-hint bid-feedback"><button class="button primary" type="submit">模擬出價</button></div>
+              <p class="field-hint" id="bid-hint"></p><p class="bid-feedback" id="bid-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+            </form>
+            <button class="text-button" id="reset-demo" type="button">重設示範</button><p class="small-note">出價只在此頁暫存，重新整理後清除；不會提交至拍賣平台。</p>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="about-section" id="about" aria-labelledby="about-title"><div class="wrap about-grid">
+      <div><p class="section-kicker">為香港收藏者而建</p><h2 id="about-title">收藏的樂趣，<br>從發現開始。</h2><p>我們希望把拍品資料、競投過程與後續交易進度放在同一個地方，讓買家和賣家更清楚每一步。</p><p lang="en" class="english-intro">Discover listings. Follow bids. Understand what happens next.</p></div>
+      <div class="product-notes"><h3>正在開發的產品方向</h3><ul><li><strong>探索收藏</strong><span>按模型、潮玩、卡牌及其他收藏瀏覽拍品。</span></li><li><strong>參與競投</strong><span>查看拍品資料、出價及拍賣狀態。</span></li><li><strong>跟進交易</strong><span>整理競投與訂單進度，建立更清晰的流程。</span></li></ul><p class="development-note">目前處於開發及測試階段。上方示範只展示部分流程，完整平台功能及付款流程仍在驗證中，尚未開放正式交易。</p></div>
+    </div></section>
+    <section class="company-section wrap" aria-labelledby="company-title"><div><h2 id="company-title">關於 CURIOLOT</h2><p>CURIOLOT 由香港公司<strong>培賢有限公司</strong>開發。<br><span lang="en">Developed by Cultivata Services Limited, Hong Kong.</span></p></div><div class="contact-prep"><h3>公司聯絡渠道</h3><p><a class="text-link" href="mailto:hello@curiolot.online"><strong>hello@curiolot.online</strong></a><br><span>產品及合作查詢。<a class="text-link" href="https://github.com/bentai751/curiolot-product">GitHub 產品介紹與示範</a></span></p><a class="text-link" href="product.html" lang="en">Read our product overview in English</a></div></section>
+  </main>
+  <footer class="site-footer wrap"><span class="brand footer-brand">CURIOLOT<span>.</span></span><p>© 2026 培賢有限公司 <span lang="en">Cultivata Services Limited</span></p><p>產品開發中</p></footer>
+</body>
+</html>
